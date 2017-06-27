@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  CityScore
+
+  Created by Rafael Rezende Machado on 26/06/17.
+  Copyright © 2017 RafaelRezendeMachado. All rights reserved.
+*/
+
+/* Validations */
+"INVALID_FIELDS" = "Campos Cidade e Estado não podem ficar em branco.";
+"INVALID_FIELD_CITY" = "Campo Cidade não pode ficar em branco.";
+"INVALID_FIELD_STATE" = "Campo Estado não pode ficar em branco.";
+"MORE_INFORMATIONS" = "Por favor forneça mais informações para a pesquisa.";
+
+/* Services Unexpected Errors */
+"UNEXPECTED_ERROR" = "Ocorreu um erro inesperado na solicitação.";
+"ERROR" = "Erro";
+
+/* Cities Search */
+"NOT_FOUND" = "Cidade/Estado não encontrado.";
+
+/* Support */
+"QUESTION" = "Ajuda";
+"TUTORIAL" = "O aplicativo vai te ajudar a descobrir a pontuação da cidade pesquisada, basta digitar totalmente ou parcialmente o nome da cidade e estado.";

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dw2-xp-fgH">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GVV-8X-hGh">
+            <objects>
+                <navigationController storyboardIdentifier="SearchResultNavigationController" navigationBarHidden="YES" id="dw2-xp-fgH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4qv-Jk-gZ2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eYT-gN-BY2" kind="relationship" relationship="rootViewController" id="7pO-pU-Dna"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6g-Ak-J6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-401" y="149"/>
+        </scene>
+        <!--Search Result View Controller-->
+        <scene sceneID="NPy-jh-d9d">
+            <objects>
+                <viewController storyboardIdentifier="RMSearchResultViewController" id="eYT-gN-BY2" customClass="RMSearchResultViewController" customModule="CityScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KGH-6s-msj"/>
+                        <viewControllerLayoutGuide type="bottom" id="8QZ-Dk-zBx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qh3-R9-yQN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6YB-fN-gpy">
+                                <rect key="frame" x="16" y="55" width="288" height="493"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="eYT-gN-BY2" id="5hy-54-TBH"/>
+                                    <outlet property="delegate" destination="eYT-gN-BY2" id="6Pt-3K-cnf"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado Pesquisa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUs-mn-puK">
+                                <rect key="frame" x="62" y="22" width="197" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xKR-YR-O1y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5t-pg-jHM">
+                                <rect key="frame" x="15" y="19" width="27" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="5Ct-i7-FG1"/>
+                                    <constraint firstAttribute="height" constant="27" id="yHk-Ci-kfp"/>
+                                </constraints>
+                                <state key="normal" image="BackIcon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="performBack:" destination="eYT-gN-BY2" eventType="touchUpInside" id="DyU-la-YFn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XUs-mn-puK" secondAttribute="trailing" constant="61" id="4Vh-LA-c47"/>
+                            <constraint firstItem="XUs-mn-puK" firstAttribute="leading" secondItem="Qh3-R9-yQN" secondAttribute="leading" constant="62" id="A84-2k-jmC"/>
+                            <constraint firstItem="6YB-fN-gpy" firstAttribute="centerX" secondItem="Qh3-R9-yQN" secondAttribute="centerX" id="DCj-Xs-OZX"/>
+                            <constraint firstItem="F5t-pg-jHM" firstAttribute="top" secondItem="Qh3-R9-yQN" secondAttribute="top" constant="19" id="MSA-gi-vDq"/>
+                            <constraint firstItem="6YB-fN-gpy" firstAttribute="leading" secondItem="Qh3-R9-yQN" secondAttribute="leading" constant="16" id="Tk8-Yd-55o"/>
+                            <constraint firstItem="6YB-fN-gpy" firstAttribute="top" secondItem="XUs-mn-puK" secondAttribute="bottom" constant="12" id="gKh-sv-zlR"/>
+                            <constraint firstItem="XUs-mn-puK" firstAttribute="top" secondItem="KGH-6s-msj" secondAttribute="bottom" constant="2" id="iDb-d2-dGq"/>
+                            <constraint firstItem="XUs-mn-puK" firstAttribute="centerX" secondItem="Qh3-R9-yQN" secondAttribute="centerX" id="lm2-oE-807"/>
+                            <constraint firstItem="8QZ-Dk-zBx" firstAttribute="top" secondItem="6YB-fN-gpy" secondAttribute="bottom" constant="20" id="o6R-us-S3a"/>
+                            <constraint firstAttribute="trailing" secondItem="6YB-fN-gpy" secondAttribute="trailing" constant="16" id="tW6-lI-bo1"/>
+                            <constraint firstItem="F5t-pg-jHM" firstAttribute="leading" secondItem="Qh3-R9-yQN" secondAttribute="leading" constant="15" id="yHn-0D-UZ2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sfl-4H-NIo"/>
+                    <connections>
+                        <outlet property="backButton" destination="F5t-pg-jHM" id="AF4-Ka-P6j"/>
+                        <outlet property="tableView" destination="6YB-fN-gpy" id="q2M-dR-LOD"/>
+                        <segue destination="f3r-Te-KwQ" kind="show" identifier="segueShowScore" id="BJa-mT-iUk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XTb-WG-N1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348.75" y="148.94366197183098"/>
+        </scene>
+        <!--RMShowScoreViewController-->
+        <scene sceneID="gaL-nD-7Hi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Score" referencedIdentifier="RMShowScoreViewController" id="f3r-Te-KwQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJU-bW-fPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackIcon" width="534" height="534"/>
+    </resources>
+</document>

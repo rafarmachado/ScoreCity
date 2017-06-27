@@ -1,0 +1,6 @@
+framework module Pods_CityScore {
+  umbrella header "Pods-CityScore-umbrella.h"
+
+  export *
+  module * { export * }
+}
